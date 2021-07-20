@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf13e2ad-fd7e-44f9-a27b-a10c60a828c8" name="Default Changelist" comment="" />
+    <list default="true" id="bf13e2ad-fd7e-44f9-a27b-a10c60a828c8" name="Default Changelist" comment="add icon">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,8 +69,27 @@
       <workItem from="1621045790668" duration="5652000" />
       <workItem from="1621058239790" duration="12668000" />
       <workItem from="1621083255709" duration="983000" />
-      <workItem from="1621131482893" duration="1362000" />
+      <workItem from="1621131482893" duration="2605000" />
+      <workItem from="1621219636674" duration="1967000" />
+      <workItem from="1621259941786" duration="367000" />
+      <workItem from="1622081162983" duration="1630000" />
+      <workItem from="1626751300583" duration="5718000" />
     </task>
+    <task id="LOCAL-00001" summary="add icon">
+      <created>1621136423567</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1621136423567</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add icon">
+      <created>1621136531991</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1621136531991</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,5 +105,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="add icon" />
   </component>
 </project>

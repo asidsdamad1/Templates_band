@@ -11,7 +11,8 @@
 </head>
 <body>
     <div id="main">
-    <div id="header">
+
+        <div id="header">
         <!--Begin: Nav-->
         <ul id="nav">
             <li><a href="#">Home</a></li>
@@ -42,7 +43,7 @@
 
     </div>
 
-    <div id="slider">
+        <div id="slider">
         <div class="text-content">
             <div class="text-heading">Los Angeles</div>
             <div class="text-description">We had the best time playing at Venice Beach!
@@ -51,7 +52,7 @@
         </div>
     </div>
 
-    <div id="content">
+        <div id="content">
         <!--About Section-->
         <div id="band" class="content-section">
             <h2 class="section-heading">THE BAND</h2>
@@ -105,7 +106,7 @@
                             <h3 class="place-heading">New York</h3>
                             <p class="place-time">Fri 27 Nov 2016</p>
                             <div class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                            <a href="#tour" class="s-full-width btn">Buy Tickets</a>
+                            <button class="s-full-width btn js-buy-ticket">Buy Tickets</button>
                         </div>
                     </div>
                     <div class="col col-3 mt-16 s-col-full">
@@ -114,7 +115,7 @@
                             <h3 class="place-heading">New York</h3>
                             <p class="place-time">Fri 27 Nov 2016</p>
                             <div class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                            <a href="#tour" class="s-full-width btn">Buy Tickets</a>
+                            <button class="s-full-width btn js-buy-ticket">Buy Tickets</button>
                         </div>
                     </div>
                     <div class="col col-3 mt-16 s-col-full">
@@ -123,7 +124,7 @@
                             <h3 class="place-heading">New York</h3>
                             <p class="place-time">Fri 27 Nov 2016</p>
                             <div class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                            <a href="#tour" class="s-full-width btn">Buy Tickets</a>
+                            <button class="s-full-width btn js-buy-ticket">Buy Tickets</button>
                         </div>
                     </div>
 
@@ -143,22 +144,22 @@
                 <div class="col col-2 s-col-full contact-info">
                     <p><i class="ti-location-pin "></i>Chicago, US</p>
                     <p><i class="ti-mobile"></i><a href="tel:+00 151515">Phone: +00 151515</a> </p>
-                    <p><i class="ti-email"></i> <a href="mailto:mail@mail.com">Email: mail@mail.com</a></p>
+                    <p><i class="ti-email"></i><a href="mailto:mail@mail.com">Email: mail@mail.com</a></p>
                 </div>
                 <div class="col col-2 s-col-full contact-form">
                     <form action="">
                         <div class="row ">
                             <div class="col col-2 s-col-full">
-                                <input type="text" name="" placeholder="Name" required id="" class="form-control">
+                                <input type="text" name="" placeholder="Name" required  class="form-control">
                             </div>
                             <div class="col col-2 s-col-full s-mt-8">
-                                <input type="email" name="" placeholder="Email" required id="" class="form-control">
+                                <input type="email" name="" placeholder="Email" required class="form-control">
                             </div>
 
                         </div>
                         <div class="row mt-8">
                             <div class="col col-full ">
-                                <input type="text" name=    "" placeholder="Message" required id="" class="form-control">
+                                <input type="text" name=    "" placeholder="Message" required class="form-control">
                             </div>
                         </div>
                         <input class="mt-16 s-full-width btn pull-right contact-submit-btn" type="submit" value="SEND" >
@@ -173,7 +174,7 @@
         </div>
     </div>
 
-    <div id="footer">
+        <div id="footer">
         <div class="social-list">
             <a href=""><i class="ti-facebook"></i></a>
             <a href=""><i class="ti-instagram"></i></a>
@@ -184,7 +185,45 @@
         </div>
         <p class="copytight">Powered by <a href="">w3.css</a> </p>
     </div>
-</div>
+
+    </div>
+
+    <div class="modal js-modal">
+
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close "></i>
+            </div>
+
+            <header class="modal-header">
+                <i class="ti-bag modal-heading-icon"></i>
+                Tickets
+            </header>
+
+            <div class="modal-body">
+                <label for="tickets-quantity" class="modal-label">
+                    <i class="ti-shopping-cart"></i>
+                    Tickets, $15 per person
+                </label>
+                <input id="tickets-quantity" type="text" class="modal-input" placeholder="How many?">
+
+                <label for="tickets-email" class="modal-label">
+                    <i class="ti-user"></i>
+                    Send To
+                </label>
+                <input id="tickets-email" type="text" class="modal-input" placeholder="Enter email...">
+
+                <button id="buy-tickets">
+                    Pay
+                    <i class="ti-check"></i>
+                </button>
+            </div>
+
+            <footer class="modal-footer">
+                <p class="modal-help">Need <a href="">help?</a></p>
+            </footer>
+        </div>
+    </div>
 
     <script>
         var header = document.getElementById('header');
@@ -217,5 +256,34 @@
         }
 
     </script>
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalContainer = document.querySelector('.js-modal-container')
+        const modalClose = document.querySelector(".js-modal-close")
+
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+
+        function hideBuyTickets() {
+            modal.classList.remove('open')
+        }
+
+        for(const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+
+        modalClose.addEventListener('click', hideBuyTickets)
+
+        modal.addEventListener('click', hideBuyTickets)
+
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+    </script>
 </body>
+
+
 </html>
